@@ -2,56 +2,85 @@
  * @param {number[]} numbers an array of integers
  * @returns {number} the length of the array
  */
+
 function getLength(numbers) {
-  // TODO
+  len = numbers.length;
+  return len;
 }
 
 /**
  * @param {number[]} numbers an array of integers
  * @returns {number} the sum of the numbers
  */
+
 function getSum(numbers) {
-  // TODO
+  len = numbers.length;
+  let sum = 0;
+  let i = 0;
+  while (i < len) {
+    addOn = parseInt(numbers[i]);
+    sum = sum + addOn;
+    i += 1;
+  }
+  return sum;
 }
 
 /**
  * @param {number[]} numbers an array of integers
  * @returns {number} the mean of the numbers
  */
+
 function getMean(numbers) {
-  // TODO
+  const len = numbers.length;
+  const total = getSum(numbers);
+  const mean = total / len;
+  return mean;
 }
 
 /**
  * @param {number[]} numbers an array of integers
  * @returns {number} the smallest of the numbers
  */
+
 function getMin(numbers) {
-  // TODO
+  return Math.min(...numbers);
 }
 
 /**
  * @param {number[]} numbers an array of integers
  * @returns {number} the largest of the numbers
  */
+
 function getMax(numbers) {
-  // TODO
+  return Math.max(...numbers);
 }
 
 /**
  * @param {number[]} numbers an array of integers
  * @returns {number} the range of the numbers (max - min)
  */
+
 function getRange(numbers) {
-  // TODO
+  const range = getMax(numbers) - getMin(numbers);
+  return range;
 }
 
 /**
  * @param {number[]} numbers an array of integers
  * @returns {number[]} the even numbers in the array
  */
+
 function getEvens(numbers) {
-  // TODO
+  const len = getLength(numbers);
+  let evenNumbers = [];
+  let i = 0;
+  while (i < len) {
+    if (numbers[i] % 2 === 0) {
+      evenNumbers.push(numbers[i]);
+    }
+    i += 1;
+  }
+  return evenNumbers;
 }
 
 /**
@@ -59,7 +88,16 @@ function getEvens(numbers) {
  * @returns {number[]} the odd numbers in the array
  */
 function getOdds(numbers) {
-  // TODO
+  const len = getLength(numbers);
+  let oddNumbers = [];
+  let i = 0;
+  while (i < len) {
+    if (numbers[i] % 2 === 1) {
+      oddNumbers.push(numbers[i]);
+    }
+    i += 1;
+  }
+  return oddNumbers;
 }
 
 // === READ BUT DO NOT EDIT THE CODE BELOW ===
